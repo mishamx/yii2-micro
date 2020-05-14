@@ -1,7 +1,7 @@
 {
-    "name": "yiisoft/yii2-app-basic",
+    "name": "yiisoft/yii2-docker",
     "description": "Yii 2 Basic Project Template",
-    "keywords": ["yii2", "framework", "basic", "project template"],
+    "keywords": ["yii2", "framework", "basic", "project template", "docker"],
     "homepage": "http://www.yiiframework.com/",
     "type": "project",
     "license": "BSD-3-Clause",

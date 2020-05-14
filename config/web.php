@@ -14,11 +14,18 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => getenv('COOKIE_VALIDATION_KEY'),
+//            'enableCsrfValidation' => false,
+            // but if you absolutely need it set cookie domain to localhost
+            /*
+            'csrfCookie' => [
+                'domain' => 'localhost',
+            ],
+            */
         ],
-        'cache' => [
-            'class' => 'yii\caching\FileCache',
-        ],
+//        'cache' => [
+//            'class' => 'yii\caching\FileCache',
+//        ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,

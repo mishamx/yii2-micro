@@ -1,7 +1,15 @@
 version: '2'
 services:
   app:
-    image: mishamx/php-nginx:7.2
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        BUILD_MODE: dev
+        IMAGE_FROM: builder
+#        IMAGE_FROM: "mishamx/php-nginx:7.2-advanced"
+    environment:
+      COOKIE_VALIDATION_KEY: $COOKIE_VALIDATION_KEY
     volumes:
       - ./:/var/www/:delegated
     ports:
