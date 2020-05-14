@@ -1,5 +1,5 @@
 {
-    "name": "yiisoft/yii2-docker",
+    "name": "mishamx/yii2-micro",
     "description": "Yii 2 Basic Project Template",
     "keywords": ["yii2", "framework", "basic", "project template", "docker"],
     "homepage": "http://www.yiiframework.com/",
