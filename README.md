@@ -51,7 +51,7 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install this project template using the following command:
 
 ~~~
-composer create-project --prefer-dist mishamx/yii2-micro basic
+composer create-project --prefer-dist --ignore-platform-reqs mishamx/yii2-micro basic
 ~~~
 
 Now you should be able to access the application through the following URL, assuming `basic` is the directory
@@ -86,11 +86,7 @@ http://localhost/basic/web/
 
 Update your vendor packages
 
-    docker-compose run --rm php composer update --prefer-dist
-    
-Run the installation triggers (creating cookie validation code)
-
-    docker-compose run --rm php composer install    
+    docker run --rm -v $(pwd)/:/var/www/web/ mishamx/php-nginx:7.2.30-builder composer create-project --prefer-dist mishamx/yii2-micro basic    
     
 Start the container
 
